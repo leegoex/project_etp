@@ -1,0 +1,90 @@
+{% extends "index.html" %}
+{% block script %}
+	window.onload = function() {
+		$("#datepicker").datepicker({
+			monthNames: ["一月","二月","三月","四月","五月","六月","七月","八月","九月","十月","十一月","十二月"],
+			dayNamesMin: ["日","一","二","三","四","五","六"]
+		});
+		$("#timerpicker").timepicker({
+			timeFormat: "HH:mm:ss",
+			showSecond: true,
+			showTime: false,
+			hourText: "时：",
+			minuteText: "分：",
+			secondText: "秒：",
+			timeOnlyTitle: "选择时间",
+			currentText: "当前时间",
+			closeText: "关闭"
+		});
+	}
+{% endblock %}
+{% block content %}
+<form enctype="multipart/form-data" action="" method="post">{% csrf_token %} 
+<div class="mystyle">
+	<fieldset>
+		<legend>网络参数</legend>
+		<table>
+			<tr>
+				<td>IP地址：</td><td><input type="text" name="ipaddress" value="{{ ipaddress }}" /></td>
+				<td>子网掩码：</td><td><input type="text" name="netmask" value="{{ netmask }}" /></td>
+				<td>默认网关：</td><td><input type="text" name="gateway" value="{{ gateway }}" /></td>
+				<td>DNS：</td><td><input type="text" name="dns" value="{{ dns }}" /></td>
+			</tr>
+		</table>
+		<div>
+			<input type="submit" name="todo" value="保存网络参数" />
+		</div>
+	</fieldset>
+</div>
+<div class="mystyle">
+	<fieldset>
+		<legend>日期时间设置</legend>
+		<table>
+			<tr>
+				<td>日期：</td><td><input type="text" id="datepicker" name="date" value="{{ date }}" /></td>
+				<td>时间：</td>
+				<td>
+					<div>
+						<input type="text" id="timerpicker" name="time" value="{{ time }}" />
+					</div>
+				</td>
+				<td colspan="2"><input type="checkbox" name="enable_sync" value="checked" {{ enable_sync }} />启用</td>
+				<td>时间同步服务器：</td><td><input type="text" name="time_server" value="{{ time_server }}" /></td>
+			</tr>
+		</table>
+		<div>
+			<input type="submit" name="todo" value="保存时间设置" />
+		</div>
+	</fieldset>
+</div>
+<div class="mystyle">
+	<fieldset>
+		<legend>用户登录</legend>
+		<table>
+			<tr>
+				<td>用户名：</td><td><input type="text" name="username" value="{{ username }}" /></td>
+				<td>&nbsp;</td><td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td>密码：</td><td><input type="text" name="password" name="password" value="{{ password }}" /></td>
+				<td colspan="2"><input type="submit" name="todo" value="修改" /></td>
+			</tr>
+		</table>
+	</fieldset>
+</div>
+<div class="mystyle">
+	<fieldset>
+		<legend>软件在线升级</legend>
+		<table>
+			<tr>
+				<form enctype="multipart/form-data" method="post" action="">{% csrf_token %}
+				<td>选择需要升级的文件：</td>
+				<td><input type="file" name="update_file" id="update_file" /></td>
+				<td><input type="submit" id="upload" name="todo" value="升级" /></td>
+				</form>
+			</tr>
+		</table>
+	</fieldset>
+</div>
+</form>
+{% endblock %}

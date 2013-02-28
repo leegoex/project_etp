@@ -1,0 +1,208 @@
+{% extends "index.html" %}
+{% block script %}
+	function getXY(id) {
+		var position = $(id).val();
+		if(position) {
+			var xypos = position.split("/");
+			if (xypos && xypos[0]) {
+				$("#xpos").val(xypos[0]);
+			}
+			if (xypos && xypos[1]) {
+				$("#ypos").val(xypos[1]);
+			}
+		}
+	}
+	function setXY(id) {
+		var position = $("#xpos").val() + "/" + $("#ypos").val();
+		$(id).val(position);
+		//清空值，以备下次使用
+		$("#xpos").val("");
+		$("#ypos").val("");
+	}
+	function XY(id) {
+		$("#adjust").dialog("open"); 
+		getXY(id);
+		$("#ok").unbind("click");
+		$("#ok").click(function() { 
+			$("#adjust").dialog("close"); 
+			setXY(id);
+		});
+	}
+	window.onload = function() {
+
+		$("#image_quality").slider({
+			value: new Number({{ image_quality|cut:"%" }}),
+			slide: function(event, ui) {
+				$("#image_quality_show").val(ui.value+"%");
+			}
+		});
+
+		$( "#adjust" ).dialog({ autoOpen: false, modal: true });
+		$("#d1_lane1").click(function() { XY("#d1_lane1_delta"); });
+		$("#d1_lane2").click(function() { XY("#d1_lane2_delta"); });
+		$("#d1_lane3").click(function() { XY("#d1_lane3_delta"); });
+		$("#d1_lane4").click(function() { XY("#d1_lane4_delta"); });
+		$("#d2_lane1").click(function() { XY("#d2_lane1_delta"); });
+		$("#d2_lane2").click(function() { XY("#d2_lane2_delta"); });
+		$("#d2_lane3").click(function() { XY("#d2_lane3_delta"); });
+		$("#d2_lane4").click(function() { XY("#d2_lane4_delta"); });
+		$("#cancel").click(function() { $("#adjust").dialog("close"); });
+	}
+{% endblock %}
+{% block content %}
+<div id="adjust" title="调节值">
+	<div style="text-align: center;">
+		<div><label>X:</label><input type="text" id="xpos" /></div>
+		<div><label>Y:</label><input type="text" id="ypos" /></div>
+		<div>
+			<input type="button" id="ok" value="确定" />
+			<input type="button" id="cancel" value="取消" />
+		</div>
+	</div>
+</div>
+<form action="" method="post">{% csrf_token %}
+<div class="mystyle">
+	<fieldset>
+		<legend>路口参数</legend>
+		<table>
+			<tr>
+				<td>路口编号：</td><td><input type="text" name="serial" value="{{ serial }}" /></td>
+				<td>路段代码：</td><td><input type="text" name="code" value="{{ code }}" /></td>
+				<td>路口名称：</td><td colspan="3"><input style="width: 100%;" type="text" name="name" value="{{ name }}" /></td>
+			</tr>
+			<tr>
+				<td>公里数：</td><td><input type="text" name="kilometer" value="{{ kilometer }}" /></td>
+				<td>道路米数：</td><td><input type="text" name="meter" value="{{ meter }}" /></td>
+				<td>操作员编号：</td><td colspan="3"><input type="text" name="operator" value="{{ operator }}" /></td>
+			</tr>
+			<tr>
+				<td>命名格式：</td>
+				<td>
+					<select name="name_format">
+						{% for format in format_list  %}
+						<option value="{{format.value}}" {% ifequal format.value name_format %}selected{% endifequal %}>{{ format.text }}</option>
+						{% endfor %}
+					</select>
+				</td>
+				<td>图片大小：</td>
+				<td>
+					<select name="image_size">
+						{% for size in image_size_list  %}
+						<option value="{{size.value}}" {% ifequal size.value image_size %}selected{% endifequal %}>{{ size.text }}</option>
+						{% endfor %}
+					</select>
+				</td>
+				<td>图片质量：</td>
+				<td colspan="3">
+					<div id="image_quality"></div>
+					<input type="text" style="display:none;" id="image_quality_show" name="image_quality" value="{{ image_quality }}" />
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+</div>
+<div class="mystyle">
+	<fieldset>
+		<legend>测速参数</legend>
+		<table>
+			<tr>
+				<td>限速值：</td><td><input type="text" name="speed_limit"  value="{{ speed_limit }}" /></td>
+				<td>起拍值：</td><td><input type="text" name="speed_starting" value="{{ speed_starting }}" /></td>
+				<td>速度调节：</td><td colspan="3"><input type="text" name="speed_delta" value="{{ speed_delta }}" /><input type="checkbox" name="lane_same" value="checked" {{ lane_same }}/>所有车道相同</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="enable_direction1" value="checked" {{ enable_direction1 }}/>方向一</td>
+				<td>方向：</td>
+				<td>
+					<select name="direction1">
+						{% for d in direction_list  %}
+						<option value="{{d.value}}" {% ifequal d.value direction1 %}selected{% endifequal %}>{{ d.text }}</option>
+						{% endfor %}
+					</select>
+				</td>
+				<td>车道一调节值：<input type="text" name="d1_lane1_delta" id="d1_lane1_delta" value="{{ d1_lane1_delta }}" /><input type="button" value="XY" id="d1_lane1" /></td>
+				<td>车道二调节值：<input type="text" name="d1_lane2_delta" id="d1_lane2_delta" value="{{ d1_lane2_delta }}" /><input type="button" value="XY" id="d1_lane2" /></td>
+				<td>车道三调节值：<input type="text" name="d1_lane3_delta" id="d1_lane3_delta" value="{{ d1_lane3_delta }}" /><input type="button" value="XY" id="d1_lane3" /></td>
+				<td colspan="2">车道四调节值：<input type="text" name="d1_lane4_delta" id="d1_lane4_delta" value="{{ d1_lane4_delta }}" /><input type="button" value="XY" id="d1_lane4" /></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="enable_direction2" value="checked" {{ enable_direction2 }}/>方向二</td>
+				<td>方向：</td>
+				<td>
+					<select name="direction2">
+						{% for d in direction_list  %}
+						<option value="{{d.value}}" {% ifequal d.value direction2 %}selected{% endifequal %}>{{ d.text }}</option>
+						{% endfor %}
+					</select>
+				</td>
+				<td>车道一调节值：<input type="text" name="d2_lane1_delta" id="d2_lane1_delta" value="{{ d2_lane1_delta }}" /><input type="button" value="XY" id="d2_lane1" /></td>
+				<td>车道二调节值：<input type="text" name="d2_lane2_delta" id="d2_lane2_delta" value="{{ d2_lane2_delta }}" /><input type="button" value="XY" id="d2_lane2" /></td>
+				<td>车道三调节值：<input type="text" name="d2_lane3_delta" id="d2_lane3_delta" value="{{ d2_lane3_delta }}" /><input type="button" value="XY" id="d2_lane3" /></td>
+				<td colspan="2">车道四调节值：<input type="text" name="d2_lane4_delta" id="d2_lane4_delta" value="{{ d2_lane4_delta }}" /><input type="button" value="XY"id="d2_lane4" /></td>
+			</tr>
+		</table>
+	</fieldset>
+</div>
+<div class="mystyle">
+	<fieldset>
+		<legend>FTP参数<input type="checkbox" name="enable_ftp" value="checked" {{ enable_ftp }}/>启用</legend>
+		<table>
+			<tr>
+				<td>服务器地址：</td><td><input type="text" name="remote" value="{{ remote }}" /></td>
+				<td>端口：</td><td><input type="text" name="port" value="{{ port }}" /></td>
+				<td colspan="2"><input type="checkbox" name="enable_time" value="checked" {{ enable_time }}/>启用时间段</td>
+				<td>开始：
+					<select name="time_start">
+						{% for t in time_list  %}
+						<option value="{{t.value}}" {% ifequal t.value time_start %}selected{% endifequal %}>{{ t.text }}</option>
+						{% endfor %}
+					</select>
+				</td>
+				<td>结束：
+					<select name="time_finished">
+						{% for t in time_list  %}
+						<option value="{{t.value}}" {% ifequal t.value time_finished %}selected{% endifequal %}>{{ t.text }}</option>
+						{% endfor %}
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>用户名：</td><td><input type="text" name="username" value="{{ username }}" /></td>
+				<td><input value="测试连接" type="button" /></td>
+				<td colspan="5">&nbsp;</td>
+			</tr>
+			<tr>
+				<td>密码：</td><td><input type="text" name="password" value="{{ password }}" /></td>
+				<td colspan="6">&nbsp;</td>
+			</tr>
+		</table>
+	</fieldset>
+</div>
+<div class="mystyle">
+	<fieldset>
+		<legend>服务器上传设置<input type="checkbox" name="enable_upload" value="checked" {{ enable_upload }}/>启用</legend>
+		<table>
+			<tr>
+				<td>服务器IP：</td><td><input type="text" name="serverip" value="{{ serverip }}" /></td>
+				<td>端口：</td><td><input type="text" name="serverport" value="{{ serverport }}" /></td>
+				<td><input type="button" value="测试连接" /></td>
+			</tr>
+		</table>
+	</fieldset>
+</div>
+<div class="mystyle">
+	<fieldset>
+		<legend>其他设置</legend>
+		<table>
+			<tr>
+				<td>自动清理数据：</td><td><input type="text" name="elapse" value="{{ elapse }}" />天</td>
+				<td colspan="2"><input type="checkbox" name="enable_usb" value="checked" {{ enable_usb }}/>保存数据到U盘</td>
+			</tr>
+		</table>
+	</fieldset>
+</div>
+<div class="mystyle">
+	<input type="submit" value="保存" />
+</div>
+</form>
+{% endblock %}

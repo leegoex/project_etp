@@ -1,0 +1,408 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AnnotateImage	ETPImage.cpp	/^bool ETPImage::AnnotateImage(Image& img, const string& text, const string& clr)$/;"	f	class:ETPImage	signature:(Image& img, const string& text, const string& clr)
+AnnotateImage	ETPImage.h	/^	bool AnnotateImage(Image& img, const string& text, const string& clr);$/;"	p	class:ETPImage	access:private	signature:(Image& img, const string& text, const string& clr)
+AppendImage	ETPImage.cpp	/^bool ETPImage::AppendImage(const string& filename)$/;"	f	class:ETPImage	signature:(const string& filename)
+AppendImage	ETPImage.h	/^	bool AppendImage(const string& filename);$/;"	p	class:ETPImage	access:public	signature:(const string& filename)
+CDBConnection	DBConnection.cpp	/^CDBConnection::CDBConnection(void) : m_pConn(NULL)$/;"	f	class:CDBConnection	signature:(void)
+CDBConnection	DBConnection.h	/^	CDBConnection(void);$/;"	p	class:CDBConnection	access:public	signature:(void)
+CDBConnection	DBConnection.h	/^class CDBConnection$/;"	c
+CDBConnection	ETPConfig.h	/^class CDBConnection;$/;"	x
+CDBConnection::CDBConnection	DBConnection.cpp	/^CDBConnection::CDBConnection(void) : m_pConn(NULL)$/;"	f	class:CDBConnection	signature:(void)
+CDBConnection::CDBConnection	DBConnection.h	/^	CDBConnection(void);$/;"	p	class:CDBConnection	access:public	signature:(void)
+CDBConnection::Close	DBConnection.cpp	/^void CDBConnection::Close()$/;"	f	class:CDBConnection	signature:()
+CDBConnection::Close	DBConnection.h	/^	void Close();$/;"	p	class:CDBConnection	access:public	signature:()
+CDBConnection::ExecuteSql	DBConnection.cpp	/^int CDBConnection::ExecuteSql(const char *szSql)$/;"	f	class:CDBConnection	signature:(const char *szSql)
+CDBConnection::ExecuteSql	DBConnection.h	/^	int ExecuteSql(const char *szSql);$/;"	p	class:CDBConnection	access:public	signature:(const char *szSql)
+CDBConnection::IsOpen	DBConnection.cpp	/^int CDBConnection::IsOpen()$/;"	f	class:CDBConnection	signature:()
+CDBConnection::IsOpen	DBConnection.h	/^	int IsOpen();$/;"	p	class:CDBConnection	access:public	signature:()
+CDBConnection::Open	DBConnection.cpp	/^int CDBConnection::Open(const char *szDb)$/;"	f	class:CDBConnection	signature:(const char *szDb)
+CDBConnection::Open	DBConnection.h	/^	int Open(const char *szDb);$/;"	p	class:CDBConnection	access:public	signature:(const char *szDb)
+CDBConnection::QuerySql	DBConnection.cpp	/^sqlite3_stmt* CDBConnection::QuerySql(const char *szSql)$/;"	f	class:CDBConnection	signature:(const char *szSql)
+CDBConnection::QuerySql	DBConnection.h	/^	sqlite3_stmt* QuerySql(const char *szSql);$/;"	p	class:CDBConnection	access:public	signature:(const char *szSql)
+CDBConnection::m_pConn	DBConnection.h	/^	sqlite3* m_pConn;$/;"	m	class:CDBConnection	access:private
+CDBConnection::~CDBConnection	DBConnection.cpp	/^CDBConnection::~CDBConnection()$/;"	f	class:CDBConnection	signature:()
+CDBConnection::~CDBConnection	DBConnection.h	/^	~CDBConnection(void);$/;"	p	class:CDBConnection	access:public	signature:(void)
+CDBRecordSet	DBConnection.cpp	/^CDBRecordSet::CDBRecordSet(sqlite3_stmt* pRes) : m_pRes(pRes)$/;"	f	class:CDBRecordSet	signature:(sqlite3_stmt* pRes)
+CDBRecordSet	DBConnection.h	/^	CDBRecordSet(const CDBRecordSet& rhs);$/;"	p	class:CDBRecordSet	access:private	signature:(const CDBRecordSet& rhs)
+CDBRecordSet	DBConnection.h	/^	CDBRecordSet(sqlite3_stmt* );$/;"	p	class:CDBRecordSet	access:public	signature:(sqlite3_stmt* )
+CDBRecordSet	DBConnection.h	/^class CDBRecordSet $/;"	c
+CDBRecordSet::CDBRecordSet	DBConnection.cpp	/^CDBRecordSet::CDBRecordSet(sqlite3_stmt* pRes) : m_pRes(pRes)$/;"	f	class:CDBRecordSet	signature:(sqlite3_stmt* pRes)
+CDBRecordSet::CDBRecordSet	DBConnection.h	/^	CDBRecordSet(const CDBRecordSet& rhs);$/;"	p	class:CDBRecordSet	access:private	signature:(const CDBRecordSet& rhs)
+CDBRecordSet::CDBRecordSet	DBConnection.h	/^	CDBRecordSet(sqlite3_stmt* );$/;"	p	class:CDBRecordSet	access:public	signature:(sqlite3_stmt* )
+CDBRecordSet::GetValue	DBConnection.cpp	/^int CDBRecordSet::GetValue(int nCol, char *szBuf, int nLen)$/;"	f	class:CDBRecordSet	signature:(int nCol, char *szBuf, int nLen)
+CDBRecordSet::GetValue	DBConnection.cpp	/^int CDBRecordSet::GetValue(int nCol, string& sResult)$/;"	f	class:CDBRecordSet	signature:(int nCol, string& sResult)
+CDBRecordSet::GetValue	DBConnection.h	/^	int GetValue(int nCol, char *szBuf, int nLen);$/;"	p	class:CDBRecordSet	access:public	signature:(int nCol, char *szBuf, int nLen)
+CDBRecordSet::GetValue	DBConnection.h	/^	int GetValue(int nCol, string& sResult);$/;"	p	class:CDBRecordSet	access:public	signature:(int nCol, string& sResult)
+CDBRecordSet::Next	DBConnection.cpp	/^int CDBRecordSet::Next()$/;"	f	class:CDBRecordSet	signature:()
+CDBRecordSet::Next	DBConnection.h	/^	int Next();$/;"	p	class:CDBRecordSet	access:public	signature:()
+CDBRecordSet::m_pRes	DBConnection.h	/^	sqlite3_stmt* m_pRes;$/;"	m	class:CDBRecordSet	access:private
+CDBRecordSet::operator =	DBConnection.h	/^	CDBRecordSet& operator=(CDBRecordSet& rhs);$/;"	p	class:CDBRecordSet	access:private	signature:(CDBRecordSet& rhs)
+CDBRecordSet::~CDBRecordSet	DBConnection.cpp	/^CDBRecordSet::~CDBRecordSet()$/;"	f	class:CDBRecordSet	signature:()
+CDBRecordSet::~CDBRecordSet	DBConnection.h	/^	~CDBRecordSet();$/;"	p	class:CDBRecordSet	access:public	signature:()
+CLEARSETTING	ETPDef.h	/^}CLEARSETTING,*LPCLEARSETTING;$/;"	t	typeref:struct:ClearSetting
+CROSSING	ETPDef.h	/^}CROSSING,*LPCROSSING;$/;"	t	typeref:struct:Crossing
+Clear	ETPConfig.cpp	/^const ClearSetting& ETPConfig::Clear()$/;"	f	class:ETPConfig	signature:()
+Clear	ETPConfig.h	/^	const ClearSetting& Clear();$/;"	p	class:ETPConfig	access:public	signature:()
+ClearSetting	ETPDef.h	/^typedef struct ClearSetting$/;"	s
+ClearSetting::elapse	ETPDef.h	/^	string elapse;$/;"	m	struct:ClearSetting	access:public
+ClearSetting::enable_usb	ETPDef.h	/^	string enable_usb;$/;"	m	struct:ClearSetting	access:public
+Close	DBConnection.cpp	/^void CDBConnection::Close()$/;"	f	class:CDBConnection	signature:()
+Close	DBConnection.h	/^	void Close();$/;"	p	class:CDBConnection	access:public	signature:()
+Connect	ETPUpload.cpp	/^int ETPUpload::Connect(const char* server, const char* usr, const char* pwd)$/;"	f	class:ETPUpload	signature:(const char* server, const char* usr, const char* pwd)
+Connect	ETPUpload.h	/^	int Connect(const char* server, const char* usr, const char* pwd);$/;"	p	class:ETPUpload	access:public	signature:(const char* server, const char* usr, const char* pwd)
+CreateBasename	ETPImage.cpp	/^void ETPImage::CreateBasename()$/;"	f	class:ETPImage	signature:()
+CreateBasename	ETPImage.h	/^	void CreateBasename();$/;"	p	class:ETPImage	access:private	signature:()
+CreateIni	ETPImage.cpp	/^void ETPImage::CreateIni(const string& filename)$/;"	f	class:ETPImage	signature:(const string& filename)
+CreateIni	ETPImage.h	/^	void CreateIni(const string& filename);$/;"	p	class:ETPImage	access:public	signature:(const string& filename)
+Cross	ETPConfig.cpp	/^const Crossing& ETPConfig::Cross()$/;"	f	class:ETPConfig	signature:()
+Cross	ETPConfig.h	/^	const Crossing& Cross();$/;"	p	class:ETPConfig	access:public	signature:()
+Crossing	ETPDef.h	/^typedef struct Crossing$/;"	s
+Crossing::code	ETPDef.h	/^	string code;$/;"	m	struct:Crossing	access:public
+Crossing::image_quality	ETPDef.h	/^	string image_quality;$/;"	m	struct:Crossing	access:public
+Crossing::image_size	ETPDef.h	/^	string image_size;$/;"	m	struct:Crossing	access:public
+Crossing::kilometer	ETPDef.h	/^	string kilometer;$/;"	m	struct:Crossing	access:public
+Crossing::meter	ETPDef.h	/^	string meter;$/;"	m	struct:Crossing	access:public
+Crossing::name	ETPDef.h	/^	string name;$/;"	m	struct:Crossing	access:public
+Crossing::name_format	ETPDef.h	/^	string name_format;$/;"	m	struct:Crossing	access:public
+Crossing::op	ETPDef.h	/^	string op;$/;"	m	struct:Crossing	access:public
+Crossing::serial	ETPDef.h	/^	string serial;$/;"	m	struct:Crossing	access:public
+DetectImage	ETPDetectImage.cpp	/^void* ETPDetectImage::DetectImage(void *arg)$/;"	f	class:ETPDetectImage	signature:(void *arg)
+DetectImage	ETPDetectImage.h	/^	static void* DetectImage(void *arg);$/;"	p	class:ETPDetectImage	access:private	signature:(void *arg)
+DetectImageCallback	main.cpp	/^int DetectImageCallback(const vector<string>& images)$/;"	f	signature:(const vector<string>& images)
+Disconnect	ETPUpload.cpp	/^void ETPUpload::Disconnect()$/;"	f	class:ETPUpload	signature:()
+Disconnect	ETPUpload.h	/^	void Disconnect();$/;"	p	class:ETPUpload	access:public	signature:()
+ETPConfig	ETPConfig.cpp	/^ETPConfig::ETPConfig():m_db(NULL)$/;"	f	class:ETPConfig	signature:()
+ETPConfig	ETPConfig.h	/^	ETPConfig();$/;"	p	class:ETPConfig	access:private	signature:()
+ETPConfig	ETPConfig.h	/^	ETPConfig(const ETPConfig& rhs);$/;"	p	class:ETPConfig	access:private	signature:(const ETPConfig& rhs)
+ETPConfig	ETPConfig.h	/^class ETPConfig$/;"	c
+ETPConfig::Clear	ETPConfig.cpp	/^const ClearSetting& ETPConfig::Clear()$/;"	f	class:ETPConfig	signature:()
+ETPConfig::Clear	ETPConfig.h	/^	const ClearSetting& Clear();$/;"	p	class:ETPConfig	access:public	signature:()
+ETPConfig::Cross	ETPConfig.cpp	/^const Crossing& ETPConfig::Cross()$/;"	f	class:ETPConfig	signature:()
+ETPConfig::Cross	ETPConfig.h	/^	const Crossing& Cross();$/;"	p	class:ETPConfig	access:public	signature:()
+ETPConfig::ETPConfig	ETPConfig.cpp	/^ETPConfig::ETPConfig():m_db(NULL)$/;"	f	class:ETPConfig	signature:()
+ETPConfig::ETPConfig	ETPConfig.h	/^	ETPConfig();$/;"	p	class:ETPConfig	access:private	signature:()
+ETPConfig::ETPConfig	ETPConfig.h	/^	ETPConfig(const ETPConfig& rhs);$/;"	p	class:ETPConfig	access:private	signature:(const ETPConfig& rhs)
+ETPConfig::FTP	ETPConfig.cpp	/^const FTPSetting& ETPConfig::FTP()$/;"	f	class:ETPConfig	signature:()
+ETPConfig::FTP	ETPConfig.h	/^	const FTPSetting& FTP();$/;"	p	class:ETPConfig	access:public	signature:()
+ETPConfig::GetCfg	ETPConfig.cpp	/^ETPConfig* ETPConfig::GetCfg()$/;"	f	class:ETPConfig	signature:()
+ETPConfig::GetCfg	ETPConfig.h	/^	static ETPConfig* GetCfg();$/;"	p	class:ETPConfig	access:public	signature:()
+ETPConfig::Speed	ETPConfig.cpp	/^const MeasureSpeed& ETPConfig::Speed()$/;"	f	class:ETPConfig	signature:()
+ETPConfig::Speed	ETPConfig.h	/^	const MeasureSpeed& Speed();$/;"	p	class:ETPConfig	access:public	signature:()
+ETPConfig::UpdateCfg	ETPConfig.cpp	/^void ETPConfig::UpdateCfg()$/;"	f	class:ETPConfig	signature:()
+ETPConfig::UpdateCfg	ETPConfig.h	/^	void UpdateCfg();$/;"	p	class:ETPConfig	access:public	signature:()
+ETPConfig::Upload	ETPConfig.cpp	/^const ServerUpload& ETPConfig::Upload()$/;"	f	class:ETPConfig	signature:()
+ETPConfig::Upload	ETPConfig.h	/^	const ServerUpload& Upload();$/;"	p	class:ETPConfig	access:public	signature:()
+ETPConfig::m_clearsetting	ETPConfig.h	/^	ClearSetting m_clearsetting;$/;"	m	class:ETPConfig	access:private
+ETPConfig::m_crossing	ETPConfig.h	/^	Crossing m_crossing;$/;"	m	class:ETPConfig	access:private
+ETPConfig::m_db	ETPConfig.h	/^	CDBConnection* m_db;$/;"	m	class:ETPConfig	access:private
+ETPConfig::m_ftpsetting	ETPConfig.h	/^	FTPSetting m_ftpsetting;$/;"	m	class:ETPConfig	access:private
+ETPConfig::m_instance	ETPConfig.cpp	/^ETPConfig* ETPConfig::m_instance = NULL;$/;"	m	class:ETPConfig	file:
+ETPConfig::m_instance	ETPConfig.h	/^	static ETPConfig* m_instance;$/;"	m	class:ETPConfig	access:private
+ETPConfig::m_measurespeed	ETPConfig.h	/^	MeasureSpeed m_measurespeed;$/;"	m	class:ETPConfig	access:private
+ETPConfig::m_serverupload	ETPConfig.h	/^	ServerUpload m_serverupload;$/;"	m	class:ETPConfig	access:private
+ETPConfig::operator =	ETPConfig.h	/^	ETPConfig& operator=(const ETPConfig& rhs);$/;"	p	class:ETPConfig	access:private	signature:(const ETPConfig& rhs)
+ETPConfig::~ETPConfig	ETPConfig.cpp	/^ETPConfig::~ETPConfig()$/;"	f	class:ETPConfig	signature:()
+ETPConfig::~ETPConfig	ETPConfig.h	/^	~ETPConfig();$/;"	p	class:ETPConfig	access:public	signature:()
+ETPDetectImage	ETPDetectImage.cpp	/^ETPDetectImage::ETPDetectImage(const string& imageDir):$/;"	f	class:ETPDetectImage	signature:(const string& imageDir)
+ETPDetectImage	ETPDetectImage.h	/^	ETPDetectImage(const string& imageDir);$/;"	p	class:ETPDetectImage	access:public	signature:(const string& imageDir)
+ETPDetectImage	ETPDetectImage.h	/^class ETPDetectImage$/;"	c
+ETPDetectImage::DetectImage	ETPDetectImage.cpp	/^void* ETPDetectImage::DetectImage(void *arg)$/;"	f	class:ETPDetectImage	signature:(void *arg)
+ETPDetectImage::DetectImage	ETPDetectImage.h	/^	static void* DetectImage(void *arg);$/;"	p	class:ETPDetectImage	access:private	signature:(void *arg)
+ETPDetectImage::ETPDetectImage	ETPDetectImage.cpp	/^ETPDetectImage::ETPDetectImage(const string& imageDir):$/;"	f	class:ETPDetectImage	signature:(const string& imageDir)
+ETPDetectImage::ETPDetectImage	ETPDetectImage.h	/^	ETPDetectImage(const string& imageDir);$/;"	p	class:ETPDetectImage	access:public	signature:(const string& imageDir)
+ETPDetectImage::Execute	ETPDetectImage.cpp	/^void ETPDetectImage::Execute()$/;"	f	class:ETPDetectImage	signature:()
+ETPDetectImage::Execute	ETPDetectImage.h	/^	void Execute();$/;"	p	class:ETPDetectImage	access:private	signature:()
+ETPDetectImage::Run	ETPDetectImage.cpp	/^int ETPDetectImage::Run(ImageDetected pfnCb)$/;"	f	class:ETPDetectImage	signature:(ImageDetected pfnCb)
+ETPDetectImage::Run	ETPDetectImage.h	/^	int Run(ImageDetected pfnCb);$/;"	p	class:ETPDetectImage	access:public	signature:(ImageDetected pfnCb)
+ETPDetectImage::Stop	ETPDetectImage.cpp	/^void ETPDetectImage::Stop()$/;"	f	class:ETPDetectImage	signature:()
+ETPDetectImage::Stop	ETPDetectImage.h	/^	void Stop();$/;"	p	class:ETPDetectImage	access:public	signature:()
+ETPDetectImage::TrashDetected	ETPDetectImage.cpp	/^void ETPDetectImage::TrashDetected()$/;"	f	class:ETPDetectImage	signature:()
+ETPDetectImage::TrashDetected	ETPDetectImage.h	/^	void TrashDetected();$/;"	p	class:ETPDetectImage	access:private	signature:()
+ETPDetectImage::m_exit	ETPDetectImage.h	/^	bool m_exit;$/;"	m	class:ETPDetectImage	access:private
+ETPDetectImage::m_imageDir	ETPDetectImage.h	/^	string m_imageDir;$/;"	m	class:ETPDetectImage	access:private
+ETPDetectImage::m_images	ETPDetectImage.h	/^	vector<string> m_images;$/;"	m	class:ETPDetectImage	access:private
+ETPDetectImage::m_pfnCb	ETPDetectImage.h	/^	ImageDetected m_pfnCb;$/;"	m	class:ETPDetectImage	access:private
+ETPDetectImage::m_status	ETPDetectImage.h	/^	bool m_status;$/;"	m	class:ETPDetectImage	access:private
+ETPDetectImage::m_thread	ETPDetectImage.h	/^	pthread_t m_thread;$/;"	m	class:ETPDetectImage	access:private
+ETPDetectImage::~ETPDetectImage	ETPDetectImage.cpp	/^ETPDetectImage::~ETPDetectImage()$/;"	f	class:ETPDetectImage	signature:()
+ETPDetectImage::~ETPDetectImage	ETPDetectImage.h	/^	~ETPDetectImage();$/;"	p	class:ETPDetectImage	access:public	signature:()
+ETPImage	ETPImage.cpp	/^ETPImage::ETPImage()$/;"	f	class:ETPImage	signature:()
+ETPImage	ETPImage.h	/^	ETPImage();$/;"	p	class:ETPImage	access:public	signature:()
+ETPImage	ETPImage.h	/^class ETPImage$/;"	c
+ETPImage::AnnotateImage	ETPImage.cpp	/^bool ETPImage::AnnotateImage(Image& img, const string& text, const string& clr)$/;"	f	class:ETPImage	signature:(Image& img, const string& text, const string& clr)
+ETPImage::AnnotateImage	ETPImage.h	/^	bool AnnotateImage(Image& img, const string& text, const string& clr);$/;"	p	class:ETPImage	access:private	signature:(Image& img, const string& text, const string& clr)
+ETPImage::AppendImage	ETPImage.cpp	/^bool ETPImage::AppendImage(const string& filename)$/;"	f	class:ETPImage	signature:(const string& filename)
+ETPImage::AppendImage	ETPImage.h	/^	bool AppendImage(const string& filename);$/;"	p	class:ETPImage	access:public	signature:(const string& filename)
+ETPImage::CreateBasename	ETPImage.cpp	/^void ETPImage::CreateBasename()$/;"	f	class:ETPImage	signature:()
+ETPImage::CreateBasename	ETPImage.h	/^	void CreateBasename();$/;"	p	class:ETPImage	access:private	signature:()
+ETPImage::CreateIni	ETPImage.cpp	/^void ETPImage::CreateIni(const string& filename)$/;"	f	class:ETPImage	signature:(const string& filename)
+ETPImage::CreateIni	ETPImage.h	/^	void CreateIni(const string& filename);$/;"	p	class:ETPImage	access:public	signature:(const string& filename)
+ETPImage::ETPImage	ETPImage.cpp	/^ETPImage::ETPImage()$/;"	f	class:ETPImage	signature:()
+ETPImage::ETPImage	ETPImage.h	/^	ETPImage();$/;"	p	class:ETPImage	access:public	signature:()
+ETPImage::ETPImageInfo	ETPImage.h	/^	struct ETPImageInfo$/;"	s	class:ETPImage	access:private
+ETPImage::ETPImageInfo::code	ETPImage.h	/^		int code; \/\/违章代码$/;"	m	struct:ETPImage::ETPImageInfo	access:public
+ETPImage::ETPImageInfo::datetime	ETPImage.h	/^		string datetime; \/\/日期时间$/;"	m	struct:ETPImage::ETPImageInfo	access:public
+ETPImage::ETPImageInfo::fullname	ETPImage.h	/^		string fullname; \/\/文件全路径名$/;"	m	struct:ETPImage::ETPImageInfo	access:public
+ETPImage::ETPImageInfo::index	ETPImage.h	/^		int index; \/\/图片序号$/;"	m	struct:ETPImage::ETPImageInfo	access:public
+ETPImage::ETPImageInfo::ip	ETPImage.h	/^		string ip; \/\/IP地址$/;"	m	struct:ETPImage::ETPImageInfo	access:public
+ETPImage::ETPImageInfo::lane	ETPImage.h	/^		int lane; \/\/车道$/;"	m	struct:ETPImage::ETPImageInfo	access:public
+ETPImage::ETPImageInfo::number	ETPImage.h	/^		string number; \/\/车牌号$/;"	m	struct:ETPImage::ETPImageInfo	access:public
+ETPImage::ETPImageInfo::numberX	ETPImage.h	/^		int numberX; \/\/车牌坐标X$/;"	m	struct:ETPImage::ETPImageInfo	access:public
+ETPImage::ETPImageInfo::numberY	ETPImage.h	/^		int numberY; \/\/车票坐标Y$/;"	m	struct:ETPImage::ETPImageInfo	access:public
+ETPImage::ETPImageInfo::speed	ETPImage.h	/^		int speed; \/\/车速$/;"	m	struct:ETPImage::ETPImageInfo	access:public
+ETPImage::ETPImageInfo::text	ETPImage.h	/^		string text; \/\/叠加在图片上的文字$/;"	m	struct:ETPImage::ETPImageInfo	access:public
+ETPImage::GetBasename	ETPImage.cpp	/^const string& ETPImage::GetBasename()$/;"	f	class:ETPImage	signature:()
+ETPImage::GetBasename	ETPImage.h	/^	const string& GetBasename();$/;"	p	class:ETPImage	access:public	signature:()
+ETPImage::GetImageInfo	ETPImage.cpp	/^void ETPImage::GetImageInfo(const string& filename, ETPImageInfo& imageInfo)$/;"	f	class:ETPImage	signature:(const string& filename, ETPImageInfo& imageInfo)
+ETPImage::GetImageInfo	ETPImage.h	/^	void GetImageInfo(const string& filename, ETPImageInfo& imageInfo);$/;"	p	class:ETPImage	access:private	signature:(const string& filename, ETPImageInfo& imageInfo)
+ETPImage::SetImages	ETPImage.cpp	/^bool ETPImage::SetImages(const vector<string>& images)$/;"	f	class:ETPImage	signature:(const vector<string>& images)
+ETPImage::SetImages	ETPImage.h	/^	bool SetImages(const vector<string>& images);$/;"	p	class:ETPImage	access:public	signature:(const vector<string>& images)
+ETPImage::SetZoomArea	ETPImage.cpp	/^bool ETPImage::SetZoomArea(int x, int y, int width, int height)$/;"	f	class:ETPImage	signature:(int x, int y, int width, int height)
+ETPImage::SetZoomArea	ETPImage.h	/^	bool SetZoomArea(int x, int y, int width, int height);$/;"	p	class:ETPImage	access:private	signature:(int x, int y, int width, int height)
+ETPImage::m_basename	ETPImage.h	/^	string m_basename; \/\/文件名(用于生成图片文件和配置文件的基础名)$/;"	m	class:ETPImage	access:private
+ETPImage::m_images	ETPImage.h	/^	vector<ETPImageInfo> m_images;$/;"	m	class:ETPImage	access:private
+ETPImage::m_imgBottom	ETPImage.h	/^	vector<Image> m_imgBottom;$/;"	m	class:ETPImage	access:private
+ETPImage::m_imgTop	ETPImage.h	/^	vector<Image> m_imgTop;$/;"	m	class:ETPImage	access:private
+ETPImage::m_information	ETPImage.h	/^	string m_information;$/;"	m	class:ETPImage	access:private
+ETPImage::~ETPImage	ETPImage.cpp	/^ETPImage::~ETPImage()$/;"	f	class:ETPImage	signature:()
+ETPImage::~ETPImage	ETPImage.h	/^	~ETPImage();$/;"	p	class:ETPImage	access:public	signature:()
+ETPImageInfo	ETPImage.h	/^	struct ETPImageInfo$/;"	s	class:ETPImage	access:private
+ETPUpload	ETPUpload.cpp	/^ETPUpload::ETPUpload() : m_curl(NULL), m_headerlist(NULL)$/;"	f	class:ETPUpload	signature:()
+ETPUpload	ETPUpload.h	/^	ETPUpload();$/;"	p	class:ETPUpload	access:public	signature:()
+ETPUpload	ETPUpload.h	/^class ETPUpload$/;"	c
+ETPUpload::Connect	ETPUpload.cpp	/^int ETPUpload::Connect(const char* server, const char* usr, const char* pwd)$/;"	f	class:ETPUpload	signature:(const char* server, const char* usr, const char* pwd)
+ETPUpload::Connect	ETPUpload.h	/^	int Connect(const char* server, const char* usr, const char* pwd);$/;"	p	class:ETPUpload	access:public	signature:(const char* server, const char* usr, const char* pwd)
+ETPUpload::Disconnect	ETPUpload.cpp	/^void ETPUpload::Disconnect()$/;"	f	class:ETPUpload	signature:()
+ETPUpload::Disconnect	ETPUpload.h	/^	void Disconnect();$/;"	p	class:ETPUpload	access:public	signature:()
+ETPUpload::ETPUpload	ETPUpload.cpp	/^ETPUpload::ETPUpload() : m_curl(NULL), m_headerlist(NULL)$/;"	f	class:ETPUpload	signature:()
+ETPUpload::ETPUpload	ETPUpload.h	/^	ETPUpload();$/;"	p	class:ETPUpload	access:public	signature:()
+ETPUpload::ReadCallback	ETPUpload.cpp	/^size_t ETPUpload::ReadCallback(void *ptr, size_t size, size_t nmemb, void *stream)$/;"	f	class:ETPUpload	signature:(void *ptr, size_t size, size_t nmemb, void *stream)
+ETPUpload::ReadCallback	ETPUpload.h	/^	static size_t ReadCallback(void *ptr, size_t size, size_t nmemb, void *stream);$/;"	p	class:ETPUpload	access:protected	signature:(void *ptr, size_t size, size_t nmemb, void *stream)
+ETPUpload::Upload	ETPUpload.cpp	/^int ETPUpload::Upload(const char* filename)$/;"	f	class:ETPUpload	signature:(const char* filename)
+ETPUpload::Upload	ETPUpload.h	/^	int Upload(const char* filename);$/;"	p	class:ETPUpload	access:public	signature:(const char* filename)
+ETPUpload::m_curl	ETPUpload.h	/^	CURL *m_curl;$/;"	m	class:ETPUpload	access:private
+ETPUpload::m_headerlist	ETPUpload.h	/^	struct curl_slist *m_headerlist;$/;"	m	class:ETPUpload	typeref:struct:ETPUpload::curl_slist	access:private
+ETPUpload::~ETPUpload	ETPUpload.cpp	/^ETPUpload::~ETPUpload()$/;"	f	class:ETPUpload	signature:()
+ETPUpload::~ETPUpload	ETPUpload.h	/^	~ETPUpload();$/;"	p	class:ETPUpload	access:public	signature:()
+Execute	ETPDetectImage.cpp	/^void ETPDetectImage::Execute()$/;"	f	class:ETPDetectImage	signature:()
+Execute	ETPDetectImage.h	/^	void Execute();$/;"	p	class:ETPDetectImage	access:private	signature:()
+ExecuteSql	DBConnection.cpp	/^int CDBConnection::ExecuteSql(const char *szSql)$/;"	f	class:CDBConnection	signature:(const char *szSql)
+ExecuteSql	DBConnection.h	/^	int ExecuteSql(const char *szSql);$/;"	p	class:CDBConnection	access:public	signature:(const char *szSql)
+FTP	ETPConfig.cpp	/^const FTPSetting& ETPConfig::FTP()$/;"	f	class:ETPConfig	signature:()
+FTP	ETPConfig.h	/^	const FTPSetting& FTP();$/;"	p	class:ETPConfig	access:public	signature:()
+FTPSETTING	ETPDef.h	/^}FTPSETTING,*LPFTPSETTING;$/;"	t	typeref:struct:FTPSetting
+FTPSetting	ETPDef.h	/^typedef struct FTPSetting$/;"	s
+FTPSetting::enable_ftp	ETPDef.h	/^	string enable_ftp;$/;"	m	struct:FTPSetting	access:public
+FTPSetting::enable_time	ETPDef.h	/^	string enable_time;$/;"	m	struct:FTPSetting	access:public
+FTPSetting::password	ETPDef.h	/^	string password;$/;"	m	struct:FTPSetting	access:public
+FTPSetting::port	ETPDef.h	/^	string port;$/;"	m	struct:FTPSetting	access:public
+FTPSetting::remote	ETPDef.h	/^	string remote;$/;"	m	struct:FTPSetting	access:public
+FTPSetting::time_finished	ETPDef.h	/^	string time_finished;$/;"	m	struct:FTPSetting	access:public
+FTPSetting::time_start	ETPDef.h	/^	string time_start;$/;"	m	struct:FTPSetting	access:public
+FTPSetting::username	ETPDef.h	/^	string username;$/;"	m	struct:FTPSetting	access:public
+GetBasename	ETPImage.cpp	/^const string& ETPImage::GetBasename()$/;"	f	class:ETPImage	signature:()
+GetBasename	ETPImage.h	/^	const string& GetBasename();$/;"	p	class:ETPImage	access:public	signature:()
+GetCfg	ETPConfig.cpp	/^ETPConfig* ETPConfig::GetCfg()$/;"	f	class:ETPConfig	signature:()
+GetCfg	ETPConfig.h	/^	static ETPConfig* GetCfg();$/;"	p	class:ETPConfig	access:public	signature:()
+GetImageInfo	ETPImage.cpp	/^void ETPImage::GetImageInfo(const string& filename, ETPImageInfo& imageInfo)$/;"	f	class:ETPImage	signature:(const string& filename, ETPImageInfo& imageInfo)
+GetImageInfo	ETPImage.h	/^	void GetImageInfo(const string& filename, ETPImageInfo& imageInfo);$/;"	p	class:ETPImage	access:private	signature:(const string& filename, ETPImageInfo& imageInfo)
+GetValue	DBConnection.cpp	/^int CDBRecordSet::GetValue(int nCol, char *szBuf, int nLen)$/;"	f	class:CDBRecordSet	signature:(int nCol, char *szBuf, int nLen)
+GetValue	DBConnection.cpp	/^int CDBRecordSet::GetValue(int nCol, string& sResult)$/;"	f	class:CDBRecordSet	signature:(int nCol, string& sResult)
+GetValue	DBConnection.h	/^	int GetValue(int nCol, char *szBuf, int nLen);$/;"	p	class:CDBRecordSet	access:public	signature:(int nCol, char *szBuf, int nLen)
+GetValue	DBConnection.h	/^	int GetValue(int nCol, string& sResult);$/;"	p	class:CDBRecordSet	access:public	signature:(int nCol, string& sResult)
+INCDIR	Makefile	/^INCDIR=\/usr\/local\/include\/ImageMagick$/;"	m
+ImageDetected	ETPDetectImage.h	/^typedef int (*ImageDetected)(const vector<string>& images);$/;"	t
+IsOpen	DBConnection.cpp	/^int CDBConnection::IsOpen()$/;"	f	class:CDBConnection	signature:()
+IsOpen	DBConnection.h	/^	int IsOpen();$/;"	p	class:CDBConnection	access:public	signature:()
+LIBDIR	Makefile	/^LIBDIR=\/usr\/local\/lib$/;"	m
+LOCAL_FILE	ftpupload.c	43;"	d	file:
+LPCLEARSETTING	ETPDef.h	/^}CLEARSETTING,*LPCLEARSETTING;$/;"	t	typeref:struct:ClearSetting
+LPCROSSING	ETPDef.h	/^}CROSSING,*LPCROSSING;$/;"	t	typeref:struct:Crossing
+LPFTPSETTING	ETPDef.h	/^}FTPSETTING,*LPFTPSETTING;$/;"	t	typeref:struct:FTPSetting
+LPMEASURESPEED	ETPDef.h	/^}MEASURESPEED,*LPMEASURESPEED;$/;"	t	typeref:struct:MeasureSpeed
+LPSERVERUPLOAD	ETPDef.h	/^}SERVERUPLOAD,*LPSERVERUPLOAD;$/;"	t	typeref:struct:ServerUpload
+MEASURESPEED	ETPDef.h	/^}MEASURESPEED,*LPMEASURESPEED;$/;"	t	typeref:struct:MeasureSpeed
+MeasureSpeed	ETPDef.h	/^typedef struct MeasureSpeed$/;"	s
+MeasureSpeed::d1_lane1_delta	ETPDef.h	/^	string d1_lane1_delta;$/;"	m	struct:MeasureSpeed	access:public
+MeasureSpeed::d1_lane2_delta	ETPDef.h	/^	string d1_lane2_delta;$/;"	m	struct:MeasureSpeed	access:public
+MeasureSpeed::d1_lane3_delta	ETPDef.h	/^	string d1_lane3_delta;$/;"	m	struct:MeasureSpeed	access:public
+MeasureSpeed::d1_lane4_delta	ETPDef.h	/^	string d1_lane4_delta;$/;"	m	struct:MeasureSpeed	access:public
+MeasureSpeed::d2_lane1_delta	ETPDef.h	/^	string d2_lane1_delta;$/;"	m	struct:MeasureSpeed	access:public
+MeasureSpeed::d2_lane2_delta	ETPDef.h	/^	string d2_lane2_delta;$/;"	m	struct:MeasureSpeed	access:public
+MeasureSpeed::d2_lane3_delta	ETPDef.h	/^	string d2_lane3_delta;$/;"	m	struct:MeasureSpeed	access:public
+MeasureSpeed::d2_lane4_delta	ETPDef.h	/^	string d2_lane4_delta;$/;"	m	struct:MeasureSpeed	access:public
+MeasureSpeed::direction1	ETPDef.h	/^	string direction1;$/;"	m	struct:MeasureSpeed	access:public
+MeasureSpeed::direction2	ETPDef.h	/^	string direction2;$/;"	m	struct:MeasureSpeed	access:public
+MeasureSpeed::enable_direction1	ETPDef.h	/^	string enable_direction1;$/;"	m	struct:MeasureSpeed	access:public
+MeasureSpeed::enable_direction2	ETPDef.h	/^	string enable_direction2;$/;"	m	struct:MeasureSpeed	access:public
+MeasureSpeed::lane_same	ETPDef.h	/^	string lane_same;$/;"	m	struct:MeasureSpeed	access:public
+MeasureSpeed::speed_delta	ETPDef.h	/^	string speed_delta;$/;"	m	struct:MeasureSpeed	access:public
+MeasureSpeed::speed_limit	ETPDef.h	/^	string speed_limit;$/;"	m	struct:MeasureSpeed	access:public
+MeasureSpeed::speed_starting	ETPDef.h	/^	string speed_starting;$/;"	m	struct:MeasureSpeed	access:public
+NULL	DBConnection.cpp	7;"	d	file:
+Next	DBConnection.cpp	/^int CDBRecordSet::Next()$/;"	f	class:CDBRecordSet	signature:()
+Next	DBConnection.h	/^	int Next();$/;"	p	class:CDBRecordSet	access:public	signature:()
+OBJECTS	Makefile	/^OBJECTS=main.o ETPImage.o ETPDetectImage.o trace.o ETPConfig.o DBConnection.o ETPUpload.o$/;"	m
+Open	DBConnection.cpp	/^int CDBConnection::Open(const char *szDb)$/;"	f	class:CDBConnection	signature:(const char *szDb)
+Open	DBConnection.h	/^	int Open(const char *szDb);$/;"	p	class:CDBConnection	access:public	signature:(const char *szDb)
+PRINT	trace.h	18;"	d
+Print	trace.cpp	/^void PrintInfo::Print(const char *fmt, ...)$/;"	f	class:PrintInfo	signature:(const char *fmt, ...)
+Print	trace.h	/^	void Print(const char *fmt, ...);$/;"	p	class:PrintInfo	access:public	signature:(const char *fmt, ...)
+PrintInfo	trace.cpp	/^PrintInfo::PrintInfo(const char *f\/* = 0*\/, int l\/* = 0*\/):m_file(f), m_line(l)$/;"	f	class:PrintInfo	signature:(const char *f , int l )
+PrintInfo	trace.h	/^	PrintInfo(const char *f = 0, int l = 0);$/;"	p	class:PrintInfo	access:public	signature:(const char *f = 0, int l = 0)
+PrintInfo	trace.h	/^class PrintInfo$/;"	c
+PrintInfo::Print	trace.cpp	/^void PrintInfo::Print(const char *fmt, ...)$/;"	f	class:PrintInfo	signature:(const char *fmt, ...)
+PrintInfo::Print	trace.h	/^	void Print(const char *fmt, ...);$/;"	p	class:PrintInfo	access:public	signature:(const char *fmt, ...)
+PrintInfo::PrintInfo	trace.cpp	/^PrintInfo::PrintInfo(const char *f\/* = 0*\/, int l\/* = 0*\/):m_file(f), m_line(l)$/;"	f	class:PrintInfo	signature:(const char *f , int l )
+PrintInfo::PrintInfo	trace.h	/^	PrintInfo(const char *f = 0, int l = 0);$/;"	p	class:PrintInfo	access:public	signature:(const char *f = 0, int l = 0)
+PrintInfo::m_file	trace.h	/^	const char *m_file;$/;"	m	class:PrintInfo	access:public
+PrintInfo::m_line	trace.h	/^	const int m_line;$/;"	m	class:PrintInfo	access:public
+QuerySql	DBConnection.cpp	/^sqlite3_stmt* CDBConnection::QuerySql(const char *szSql)$/;"	f	class:CDBConnection	signature:(const char *szSql)
+QuerySql	DBConnection.h	/^	sqlite3_stmt* QuerySql(const char *szSql);$/;"	p	class:CDBConnection	access:public	signature:(const char *szSql)
+REMOTE_URL	ftpupload.c	45;"	d	file:
+RENAME_FILE_TO	ETPUpload.h	19;"	d
+RENAME_FILE_TO	ftpupload.c	46;"	d	file:
+ReadCallback	ETPUpload.cpp	/^size_t ETPUpload::ReadCallback(void *ptr, size_t size, size_t nmemb, void *stream)$/;"	f	class:ETPUpload	signature:(void *ptr, size_t size, size_t nmemb, void *stream)
+ReadCallback	ETPUpload.h	/^	static size_t ReadCallback(void *ptr, size_t size, size_t nmemb, void *stream);$/;"	p	class:ETPUpload	access:protected	signature:(void *ptr, size_t size, size_t nmemb, void *stream)
+Run	ETPDetectImage.cpp	/^int ETPDetectImage::Run(ImageDetected pfnCb)$/;"	f	class:ETPDetectImage	signature:(ImageDetected pfnCb)
+Run	ETPDetectImage.h	/^	int Run(ImageDetected pfnCb);$/;"	p	class:ETPDetectImage	access:public	signature:(ImageDetected pfnCb)
+SERVERUPLOAD	ETPDef.h	/^}SERVERUPLOAD,*LPSERVERUPLOAD;$/;"	t	typeref:struct:ServerUpload
+ServerUpload	ETPDef.h	/^typedef struct ServerUpload$/;"	s
+ServerUpload::enable_upload	ETPDef.h	/^	string enable_upload;$/;"	m	struct:ServerUpload	access:public
+ServerUpload::serverip	ETPDef.h	/^	string serverip;$/;"	m	struct:ServerUpload	access:public
+ServerUpload::serverport	ETPDef.h	/^	string serverport;$/;"	m	struct:ServerUpload	access:public
+SetImages	ETPImage.cpp	/^bool ETPImage::SetImages(const vector<string>& images)$/;"	f	class:ETPImage	signature:(const vector<string>& images)
+SetImages	ETPImage.h	/^	bool SetImages(const vector<string>& images);$/;"	p	class:ETPImage	access:public	signature:(const vector<string>& images)
+SetZoomArea	ETPImage.cpp	/^bool ETPImage::SetZoomArea(int x, int y, int width, int height)$/;"	f	class:ETPImage	signature:(int x, int y, int width, int height)
+SetZoomArea	ETPImage.h	/^	bool SetZoomArea(int x, int y, int width, int height);$/;"	p	class:ETPImage	access:private	signature:(int x, int y, int width, int height)
+Speed	ETPConfig.cpp	/^const MeasureSpeed& ETPConfig::Speed()$/;"	f	class:ETPConfig	signature:()
+Speed	ETPConfig.h	/^	const MeasureSpeed& Speed();$/;"	p	class:ETPConfig	access:public	signature:()
+Stop	ETPDetectImage.cpp	/^void ETPDetectImage::Stop()$/;"	f	class:ETPDetectImage	signature:()
+Stop	ETPDetectImage.h	/^	void Stop();$/;"	p	class:ETPDetectImage	access:public	signature:()
+TARGET	Makefile	/^TARGET=etpmain$/;"	m
+Timepiece	trace.h	/^	Timepiece(char * pBuf) $/;"	f	class:Timepiece	access:public	signature:(char * pBuf)
+Timepiece	trace.h	/^class Timepiece$/;"	c
+Timepiece::Timepiece	trace.h	/^	Timepiece(char * pBuf) $/;"	f	class:Timepiece	access:public	signature:(char * pBuf)
+Timepiece::m_pBuf	trace.h	/^	char * m_pBuf;$/;"	m	class:Timepiece	access:private
+Timepiece::tve	trace.h	/^	struct timeval tve;$/;"	m	class:Timepiece	typeref:struct:Timepiece::timeval	access:private
+Timepiece::tvs	trace.h	/^	struct timeval tvs;$/;"	m	class:Timepiece	typeref:struct:Timepiece::timeval	access:private
+Timepiece::~Timepiece	trace.h	/^	~Timepiece()$/;"	f	class:Timepiece	access:public	signature:()
+TrashDetected	ETPDetectImage.cpp	/^void ETPDetectImage::TrashDetected()$/;"	f	class:ETPDetectImage	signature:()
+TrashDetected	ETPDetectImage.h	/^	void TrashDetected();$/;"	p	class:ETPDetectImage	access:private	signature:()
+UPLOAD_FILE_AS	ETPUpload.h	18;"	d
+UPLOAD_FILE_AS	ftpupload.c	44;"	d	file:
+UpdateCfg	ETPConfig.cpp	/^void ETPConfig::UpdateCfg()$/;"	f	class:ETPConfig	signature:()
+UpdateCfg	ETPConfig.h	/^	void UpdateCfg();$/;"	p	class:ETPConfig	access:public	signature:()
+Upload	ETPConfig.cpp	/^const ServerUpload& ETPConfig::Upload()$/;"	f	class:ETPConfig	signature:()
+Upload	ETPConfig.h	/^	const ServerUpload& Upload();$/;"	p	class:ETPConfig	access:public	signature:()
+Upload	ETPUpload.cpp	/^int ETPUpload::Upload(const char* filename)$/;"	f	class:ETPUpload	signature:(const char* filename)
+Upload	ETPUpload.h	/^	int Upload(const char* filename);$/;"	p	class:ETPUpload	access:public	signature:(const char* filename)
+_ETPCONFIG_H_	ETPConfig.h	2;"	d
+_ETPDEF_H_	ETPDef.h	2;"	d
+_ETPDETECTIMAGE_H_	ETPDetectImage.h	2;"	d
+_ETPIMAGE_H_	ETPImage.h	2;"	d
+_ETPUPLOAD_H_	ETPUpload.h	2;"	d
+_TRACE_H_	trace.h	2;"	d
+__DBCONNECTION_H__	DBConnection.h	9;"	d
+code	ETPDef.h	/^	string code;$/;"	m	struct:Crossing	access:public
+code	ETPImage.h	/^		int code; \/\/违章代码$/;"	m	struct:ETPImage::ETPImageInfo	access:public
+d1_lane1_delta	ETPDef.h	/^	string d1_lane1_delta;$/;"	m	struct:MeasureSpeed	access:public
+d1_lane2_delta	ETPDef.h	/^	string d1_lane2_delta;$/;"	m	struct:MeasureSpeed	access:public
+d1_lane3_delta	ETPDef.h	/^	string d1_lane3_delta;$/;"	m	struct:MeasureSpeed	access:public
+d1_lane4_delta	ETPDef.h	/^	string d1_lane4_delta;$/;"	m	struct:MeasureSpeed	access:public
+d2_lane1_delta	ETPDef.h	/^	string d2_lane1_delta;$/;"	m	struct:MeasureSpeed	access:public
+d2_lane2_delta	ETPDef.h	/^	string d2_lane2_delta;$/;"	m	struct:MeasureSpeed	access:public
+d2_lane3_delta	ETPDef.h	/^	string d2_lane3_delta;$/;"	m	struct:MeasureSpeed	access:public
+d2_lane4_delta	ETPDef.h	/^	string d2_lane4_delta;$/;"	m	struct:MeasureSpeed	access:public
+datetime	ETPImage.h	/^		string datetime; \/\/日期时间$/;"	m	struct:ETPImage::ETPImageInfo	access:public
+direction1	ETPDef.h	/^	string direction1;$/;"	m	struct:MeasureSpeed	access:public
+direction2	ETPDef.h	/^	string direction2;$/;"	m	struct:MeasureSpeed	access:public
+elapse	ETPDef.h	/^	string elapse;$/;"	m	struct:ClearSetting	access:public
+enable_direction1	ETPDef.h	/^	string enable_direction1;$/;"	m	struct:MeasureSpeed	access:public
+enable_direction2	ETPDef.h	/^	string enable_direction2;$/;"	m	struct:MeasureSpeed	access:public
+enable_ftp	ETPDef.h	/^	string enable_ftp;$/;"	m	struct:FTPSetting	access:public
+enable_time	ETPDef.h	/^	string enable_time;$/;"	m	struct:FTPSetting	access:public
+enable_upload	ETPDef.h	/^	string enable_upload;$/;"	m	struct:ServerUpload	access:public
+enable_usb	ETPDef.h	/^	string enable_usb;$/;"	m	struct:ClearSetting	access:public
+fullname	ETPImage.h	/^		string fullname; \/\/文件全路径名$/;"	m	struct:ETPImage::ETPImageInfo	access:public
+image_quality	ETPDef.h	/^	string image_quality;$/;"	m	struct:Crossing	access:public
+image_size	ETPDef.h	/^	string image_size;$/;"	m	struct:Crossing	access:public
+index	ETPImage.h	/^		int index; \/\/图片序号$/;"	m	struct:ETPImage::ETPImageInfo	access:public
+ip	ETPImage.h	/^		string ip; \/\/IP地址$/;"	m	struct:ETPImage::ETPImageInfo	access:public
+kilometer	ETPDef.h	/^	string kilometer;$/;"	m	struct:Crossing	access:public
+lane	ETPImage.h	/^		int lane; \/\/车道$/;"	m	struct:ETPImage::ETPImageInfo	access:public
+lane_same	ETPDef.h	/^	string lane_same;$/;"	m	struct:MeasureSpeed	access:public
+m_basename	ETPImage.h	/^	string m_basename; \/\/文件名(用于生成图片文件和配置文件的基础名)$/;"	m	class:ETPImage	access:private
+m_clearsetting	ETPConfig.h	/^	ClearSetting m_clearsetting;$/;"	m	class:ETPConfig	access:private
+m_crossing	ETPConfig.h	/^	Crossing m_crossing;$/;"	m	class:ETPConfig	access:private
+m_curl	ETPUpload.h	/^	CURL *m_curl;$/;"	m	class:ETPUpload	access:private
+m_db	ETPConfig.h	/^	CDBConnection* m_db;$/;"	m	class:ETPConfig	access:private
+m_exit	ETPDetectImage.h	/^	bool m_exit;$/;"	m	class:ETPDetectImage	access:private
+m_file	trace.h	/^	const char *m_file;$/;"	m	class:PrintInfo	access:public
+m_ftpsetting	ETPConfig.h	/^	FTPSetting m_ftpsetting;$/;"	m	class:ETPConfig	access:private
+m_headerlist	ETPUpload.h	/^	struct curl_slist *m_headerlist;$/;"	m	class:ETPUpload	typeref:struct:ETPUpload::curl_slist	access:private
+m_imageDir	ETPDetectImage.h	/^	string m_imageDir;$/;"	m	class:ETPDetectImage	access:private
+m_images	ETPDetectImage.h	/^	vector<string> m_images;$/;"	m	class:ETPDetectImage	access:private
+m_images	ETPImage.h	/^	vector<ETPImageInfo> m_images;$/;"	m	class:ETPImage	access:private
+m_imgBottom	ETPImage.h	/^	vector<Image> m_imgBottom;$/;"	m	class:ETPImage	access:private
+m_imgTop	ETPImage.h	/^	vector<Image> m_imgTop;$/;"	m	class:ETPImage	access:private
+m_information	ETPImage.h	/^	string m_information;$/;"	m	class:ETPImage	access:private
+m_instance	ETPConfig.cpp	/^ETPConfig* ETPConfig::m_instance = NULL;$/;"	m	class:ETPConfig	file:
+m_instance	ETPConfig.h	/^	static ETPConfig* m_instance;$/;"	m	class:ETPConfig	access:private
+m_line	trace.h	/^	const int m_line;$/;"	m	class:PrintInfo	access:public
+m_measurespeed	ETPConfig.h	/^	MeasureSpeed m_measurespeed;$/;"	m	class:ETPConfig	access:private
+m_pBuf	trace.h	/^	char * m_pBuf;$/;"	m	class:Timepiece	access:private
+m_pConn	DBConnection.h	/^	sqlite3* m_pConn;$/;"	m	class:CDBConnection	access:private
+m_pRes	DBConnection.h	/^	sqlite3_stmt* m_pRes;$/;"	m	class:CDBRecordSet	access:private
+m_pfnCb	ETPDetectImage.h	/^	ImageDetected m_pfnCb;$/;"	m	class:ETPDetectImage	access:private
+m_serverupload	ETPConfig.h	/^	ServerUpload m_serverupload;$/;"	m	class:ETPConfig	access:private
+m_status	ETPDetectImage.h	/^	bool m_status;$/;"	m	class:ETPDetectImage	access:private
+m_thread	ETPDetectImage.h	/^	pthread_t m_thread;$/;"	m	class:ETPDetectImage	access:private
+main	ftpupload.c	/^int main(void)$/;"	f	signature:(void)
+main	main.cpp	/^int main(int argc,char **argv) $/;"	f	signature:(int argc,char **argv)
+meter	ETPDef.h	/^	string meter;$/;"	m	struct:Crossing	access:public
+name	ETPDef.h	/^	string name;$/;"	m	struct:Crossing	access:public
+name_format	ETPDef.h	/^	string name_format;$/;"	m	struct:Crossing	access:public
+number	ETPImage.h	/^		string number; \/\/车牌号$/;"	m	struct:ETPImage::ETPImageInfo	access:public
+numberX	ETPImage.h	/^		int numberX; \/\/车牌坐标X$/;"	m	struct:ETPImage::ETPImageInfo	access:public
+numberY	ETPImage.h	/^		int numberY; \/\/车票坐标Y$/;"	m	struct:ETPImage::ETPImageInfo	access:public
+op	ETPDef.h	/^	string op;$/;"	m	struct:Crossing	access:public
+operator =	DBConnection.h	/^	CDBRecordSet& operator=(CDBRecordSet& rhs);$/;"	p	class:CDBRecordSet	access:private	signature:(CDBRecordSet& rhs)
+operator =	ETPConfig.h	/^	ETPConfig& operator=(const ETPConfig& rhs);$/;"	p	class:ETPConfig	access:private	signature:(const ETPConfig& rhs)
+password	ETPDef.h	/^	string password;$/;"	m	struct:FTPSetting	access:public
+port	ETPDef.h	/^	string port;$/;"	m	struct:FTPSetting	access:public
+read_callback	ftpupload.c	/^static size_t read_callback(void *ptr, size_t size, size_t nmemb, void *stream)$/;"	f	file:	signature:(void *ptr, size_t size, size_t nmemb, void *stream)
+remote	ETPDef.h	/^	string remote;$/;"	m	struct:FTPSetting	access:public
+serial	ETPDef.h	/^	string serial;$/;"	m	struct:Crossing	access:public
+serverip	ETPDef.h	/^	string serverip;$/;"	m	struct:ServerUpload	access:public
+serverport	ETPDef.h	/^	string serverport;$/;"	m	struct:ServerUpload	access:public
+speed	ETPImage.h	/^		int speed; \/\/车速$/;"	m	struct:ETPImage::ETPImageInfo	access:public
+speed_delta	ETPDef.h	/^	string speed_delta;$/;"	m	struct:MeasureSpeed	access:public
+speed_limit	ETPDef.h	/^	string speed_limit;$/;"	m	struct:MeasureSpeed	access:public
+speed_starting	ETPDef.h	/^	string speed_starting;$/;"	m	struct:MeasureSpeed	access:public
+sqlite3	DBConnection.h	/^struct sqlite3;$/;"	x
+sqlite3_stmt	DBConnection.h	/^struct sqlite3_stmt;$/;"	x
+text	ETPImage.h	/^		string text; \/\/叠加在图片上的文字$/;"	m	struct:ETPImage::ETPImageInfo	access:public
+time_finished	ETPDef.h	/^	string time_finished;$/;"	m	struct:FTPSetting	access:public
+time_start	ETPDef.h	/^	string time_start;$/;"	m	struct:FTPSetting	access:public
+tve	trace.h	/^	struct timeval tve;$/;"	m	class:Timepiece	typeref:struct:Timepiece::timeval	access:private
+tvs	trace.h	/^	struct timeval tvs;$/;"	m	class:Timepiece	typeref:struct:Timepiece::timeval	access:private
+username	ETPDef.h	/^	string username;$/;"	m	struct:FTPSetting	access:public
+~CDBConnection	DBConnection.cpp	/^CDBConnection::~CDBConnection()$/;"	f	class:CDBConnection	signature:()
+~CDBConnection	DBConnection.h	/^	~CDBConnection(void);$/;"	p	class:CDBConnection	access:public	signature:(void)
+~CDBRecordSet	DBConnection.cpp	/^CDBRecordSet::~CDBRecordSet()$/;"	f	class:CDBRecordSet	signature:()
+~CDBRecordSet	DBConnection.h	/^	~CDBRecordSet();$/;"	p	class:CDBRecordSet	access:public	signature:()
+~ETPConfig	ETPConfig.cpp	/^ETPConfig::~ETPConfig()$/;"	f	class:ETPConfig	signature:()
+~ETPConfig	ETPConfig.h	/^	~ETPConfig();$/;"	p	class:ETPConfig	access:public	signature:()
+~ETPDetectImage	ETPDetectImage.cpp	/^ETPDetectImage::~ETPDetectImage()$/;"	f	class:ETPDetectImage	signature:()
+~ETPDetectImage	ETPDetectImage.h	/^	~ETPDetectImage();$/;"	p	class:ETPDetectImage	access:public	signature:()
+~ETPImage	ETPImage.cpp	/^ETPImage::~ETPImage()$/;"	f	class:ETPImage	signature:()
+~ETPImage	ETPImage.h	/^	~ETPImage();$/;"	p	class:ETPImage	access:public	signature:()
+~ETPUpload	ETPUpload.cpp	/^ETPUpload::~ETPUpload()$/;"	f	class:ETPUpload	signature:()
+~ETPUpload	ETPUpload.h	/^	~ETPUpload();$/;"	p	class:ETPUpload	access:public	signature:()
+~Timepiece	trace.h	/^	~Timepiece()$/;"	f	class:Timepiece	access:public	signature:()

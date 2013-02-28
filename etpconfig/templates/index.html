@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Electronic Traffic Police</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static "css/style.css" %}" type="text/css" charset="utf-8" />	
+	<link rel="stylesheet" href="{% static "css/jquery-ui.css" %}" type="text/css" charset="utf-8" />	
+	<link rel="stylesheet" href="{% static "css/jquery-ui-timepicker-addon.css" %}" type="text/css" charset="utf-8" />
+	<script type="text/javascript" src="{% static "js/jquery-1.9.0.js" %}"></script>
+	<script type="text/javascript" src="{% static "js/jquery-ui.js" %}"></script>
+	<script type="text/javascript" src="{% static "js/jquery-ui-timepicker-addon.js" %}"></script>
+	<script type="text/javascript" src="{% static "js/jquery-ui-sliderAccess.js" %}"></script>
+	<!--[if lte IE 7]>
+		<link rel="stylesheet" href="css/ie.css" type="text/css" charset="utf-8" />	
+	<![endif]-->
+	<script type="text/javascript">
+	{% block script %}{% endblock %}
+	</script>
+</head>
+
+<body>
+	{% if login %}
+	<div id="header">
+	</div> <!-- /#header -->
+	{% else %}
+	<div id="header">
+		<a href="#" id="logo"><img src="{% static "images/logo.jpg" %}" alt="LOGO" /></a>
+		<div id="navigation">
+			<ul>
+				{% for label in label_list %}
+				{% if forloop.first %}{% ifequal label.url current_url %}<li class="first selected">{% else %}<li class="first">{% endifequal %}{% else %}{% ifequal label.url current_url %}<li class="selected">{% else %}<li>{% endifequal %}{% endif %}<a href="{{ label.url }}">{{label.text}}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div> <!-- /#header -->
+	{% endif %}
+	<div id="contents">
+		{% block content %}{% endblock %}
+	</div> <!-- /#contents -->
+	<div id="footer">
+		<span class="footnote">&copy; Copyright &copy; 2011. All rights reserved</span>
+	</div> <!-- /#footer -->
+</body>
+</html>

@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="mystyle">
+	<div stype="margin-top:200px;"><p>&nbsp;</p></div>
+	<div style="width:158px; margin-left:auto; margin-right:auto;">
+		<form action="" method="post">{% csrf_token %}
+		<div style="text-align:left;"><label>用户名：</label></div><div><input type="text" name="username" id="username" /></div>
+		<div style="text-align:left;"><label>密码：</label></div><div><input type="password" name="password" id="password" /></div>
+		<div><input type="submit" value="登录" /><div>
+		</form>
+	</div>
+</div>
+{% endblock %}

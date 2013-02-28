@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="mystyle">
+	<table border="1px;" style="border: 1px solid #FFFFFB; width: 100%;">
+		<tr><td style="width: 50%;text-align: left;">系统状态</td><td>&nbsp;</td></tr>
+		<tr><td style="width: 50%;text-align: left;">软件工作状态</td><td>{{ main_status }}</td></tr>
+		<tr><td style="width: 50%;text-align: left;">系统存储空间</td><td>{{ storage }}</td></tr>
+		<tr><td style="width: 50%;text-align: left;">系统时间</td><td>{{ system_datetime }}</td></tr>
+		<tr><td style="width: 50%;text-align: left;">网路参数</td><td>{{ networking }}</td></tr>
+		<tr><td style="width: 50%;text-align: left;">FTP状态</td><td>{{ ftp_status }}</td></tr>
+		<tr><td style="width: 50%;text-align: left;">自动上传状态</td><td>{{ upload_status }}</td></tr>
+	</table>
+</div>
+<div class="mystyle" style="margin-top: 10px; text-align: right;">
+	<form action="" method="post">{% csrf_token %}
+		<input type="submit" name="todo" value="下载参数" />
+		<input type="submit" name="todo" value="恢复出厂设置" />
+		<input type="submit" name="todo" value="重启软件" />
+		<input type="submit" name="todo" value="重启设备" />
+	</form>
+</div>
+{% endblock %}
